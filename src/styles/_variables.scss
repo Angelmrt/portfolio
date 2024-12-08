@@ -1,6 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;500;700;800;900;1000&display=swap");
+
 $background-color:#000;
-$text-nostyle:#fff;
-$neon-green:#0fa;
+$text-nostyle:#ffffff;
+$nav-fondo: rgba(44, 44, 44, 0.781);
+//$neon-green:#0fa;
+$neon-green:rgb(0, 115, 255);
 $breakpoints: (
   small: 480px,
   medium: 768px,

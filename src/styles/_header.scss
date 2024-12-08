@@ -3,7 +3,8 @@
 @use 'mixins';
 
 .neonText {
-  animation: flicker 3s infinite alternate;
+ // animation: flicker 3s infinite alternate;
+  animation: flicker 3s ease-in-out 2;
   color: $text-nostyle;
   text-align: center;
   font-size: 1.5rem;
@@ -19,7 +20,8 @@
 
 h1 {
 
-  font-size: 3rem;
+  font-size: 10rem;
+  font-family: 'Press Start 2P',cursive;
   @include respond(medium) {
     font-size: 4.2rem;
   }

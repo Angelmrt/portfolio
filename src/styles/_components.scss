@@ -1,88 +1,152 @@
 @use "globals" as *;
 
+
+.card-container {
+  padding: 50px 0;
+  height: 50vh;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.parent {
+  height: 400px;
+  width: 300px;
+  padding: 20px;
+  perspective: 1000px;
+}
+
 .card {
-    background: #191c29;
-    width: $card-width;
-    height: $card-height;
-    margin: 2vh;
-    padding: 3px;
-    position: relative;
-    border-radius: 6px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    display: flex;
-    font-size: 1.5em;
-    color: rgb(250, 253, 255); 
-    cursor: pointer;
-    
-  
+  padding-top: 100px;
+  transform-style: preserve-3d;
+  background-image: url("https://images.pexels.com/photos/1629236/pexels-photo-1629236.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: center center;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  border-radius: 10px;
+
+  &:hover {
+    background-position: 80% 20%;
+    transform: rotate3d(0.5, 1, 0, 30deg);
+  }
+
+  &.card2 {
+    filter: hue-rotate(150deg);
+  }
+
+  &.card3 {
+    filter: hue-rotate(300deg);
+  }
+
+  &.card4 {
+    filter: hue-rotate(90deg);
+  }
+
+  .content-box {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.811);
+    border-radius: 0 0 10px 10px;
+    box-shadow: rgba(0, 115, 255, 0.863) 0px 20px 50px -25px;
+    transition: all 0.5s ease-in-out;
+    padding: 50px 25px 25px 25px;
+    transform-style: preserve-3d;
+  }
+
+  .card-title,
+  .card-content,
+  .see-more {
+    transition: all 0.5s ease-in-out;
+    transform: translate3d(0px, 0px, 20px);
+
     &:hover {
-      color: rgba(88, 199, 250, 1); 
-      transition: color 1s;
-  
-      &::before, 
-      &::after {
-        animation: none; 
-        opacity: 0;
+      transform: translate3d(0px, 0px, 50px);
+    }
+  }
+
+  .card-title {
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+  }
+
+  .card-content {
+    padding-top: 15px;
+    font-size: 12px;
+    color: rgb(185, 185, 185);
+  }
+
+  .see-more {
+    display: block;
+    font-weight: 900;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: rgb(0, 136, 255);
+    padding-top: 15px;
+  }
+
+  .date-box {
+    position: absolute;
+    top: 75px;
+    left: 25px;
+    height: 60px;
+    width: 60px;
+    background-color: black;
+    border-radius: 10px;
+    padding: 12px;
+    box-shadow: 
+      rgb(0, 102, 255) 0px 20px 60px 0px, 
+      rgb(0, 200, 255) 0px 18px 36px -18px;
+    transform: translate3d(0px, 0px, 50px);
+
+    span {
+      display: block;
+      text-align: center;
+    }
+
+    .month {
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .date {
+      font-size: 19px;
+      font-weight: 900;
+      color: rgb(0, 136, 255);
+    }
+  }
+}
+
+#navbar {
+  background-color: $nav-fondo; 
+  padding: 20px 0;
+
+  nav {
+    display: flex;
+    justify-content: center; // Centra el nav
+    align-items: center;
+
+    ul {
+      display: flex; // Estilo de fila para los elementos
+      list-style: none; // Elimina los puntos de lista
+      gap: 30px; // Espacio entre los enlaces
+
+      li {
+        a {
+          text-decoration: none; // Elimina subrayado
+          color: $text-nostyle; // Usa variable para el color de los enlaces
+          font-size: 1rem;
+          font-weight: 600;
+          transition: color 0.3s ease-in-out; // Suaviza la transición de color
+
+          &:hover {
+            color: $text-nostyle; // Cambia de color al pasar el cursor
+          }
+        }
       }
     }
-  
-    &::before {
-      content: "";
-      width: 104%;
-      height: 102%;
-      border-radius: 8px;
-      background-image: linear-gradient(
-        var(--rotate),
-        #5ddcff, 
-        #3c67e3 43%, 
-        #4e00c2
-      );
-      position: absolute;
-      z-index: -1;
-      top: -1%;
-      left: -2%;
-      animation: spin 2.5s linear infinite;
-    }
-  
-    &::after {
-      position: absolute;
-      content: "";
-      top: calc(var(--card-height) / 6);
-      left: 0;
-      right: 0;
-      z-index: -1;
-      height: 100%;
-      width: 100%;
-      margin: 0 auto;
-      transform: scale(0.8);
-      filter: blur(calc(var(--card-height) / 6));
-      background-image: linear-gradient(
-        var(--rotate), 
-        #5ddcff, 
-        #3c67e3 43%, 
-        #4e00c2
-      );
-      opacity: 1;
-      transition: opacity 0.5s;
-      animation: spin 2.5s linear infinite;
-    }
   }
-  
-  @keyframes spin {
-    0% {
-      --rotate: 0deg;
-    }
-    100% {
-      --rotate: 360deg;
-    }
-  }
-  
-  a {
-    color: #212534;
-    text-decoration: none;
-    font-family: sans-serif;
-    font-weight: bold;
-    margin-top: 2rem;
-  }
+}
