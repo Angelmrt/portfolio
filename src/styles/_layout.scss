@@ -10,3 +10,14 @@ body{
     background-color:$background-color;
     color:$text-nostyle;
 }
+
+#projects{
+    min-height: 50vh;
+    background:$background-color;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    padding: 2rem 0;
+    box-sizing: border-box;
+}
