@@ -1,0 +1,93 @@
+@use "globals" as *;
+@use 'variables';
+@use 'mixins';
+
+.neonText {
+  animation: flicker 1.5s infinite alternate;
+  color: $text-nostyle;
+  text-align: center;
+  font-size: 1.5rem;
+
+  @include respond(medium) {
+    font-size: 2rem;
+  }
+
+  @include respond(large) {
+    font-size: 2.5rem;
+  }
+}
+
+h1 {
+  font-size: 3rem;
+
+  @include respond(medium) {
+    font-size: 4.2rem;
+  }
+
+  @include respond(large) {
+    font-size: 5rem;
+  }
+}
+
+/* Flickering animation */
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #0fa,
+      0 0 80px #0fa,
+      0 0 90px #0fa,
+      0 0 100px #0fa,
+      0 0 150px #0fa;
+  }
+
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+h2 {
+  font-size: 1.2rem;
+
+  @include respond(medium) {
+    font-size: 1.8rem;
+  }
+
+  @include respond(large) {
+    font-size: 2.4rem;
+  }
+}
+
+.container {
+  margin-top: 20vh;
+
+  @include respond(medium) {
+    margin-top: 15vh;
+  }
+
+  @include respond(large) {
+    margin-top: 10vh;
+  }
+}
+
+body {
+  font-size: 16px;
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: #010a01;
+
+  @include respond(medium) {
+    font-size: 18px;
+  }
+
+  @include respond(large) {
+    font-size: 20px;
+  }
+}
+
+h1, h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+}
