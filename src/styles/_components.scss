@@ -1,29 +1,31 @@
 @use "globals" as *;
 
+
+
 #navbar {
   background-color: $nav-fondo; 
   padding: 20px 0;
 
   nav {
     display: flex;
-    justify-content: center; // Centra el nav
+    justify-content: center;
     align-items: center;
 
     ul {
-      display: flex; // Estilo de fila para los elementos
-      list-style: none; // Elimina los puntos de lista
-      gap: 30px; // Espacio entre los enlaces
+      display: flex; 
+      list-style: none; 
+      gap: 30px; 
 
       li {
         a {
-          text-decoration: none; // Elimina subrayado
-          color: $text-nostyle; // Usa variable para el color de los enlaces
+          text-decoration: none; 
+          color: $text-nostyle; 
           font-size: 1rem;
           font-weight: 600;
-          transition: color 0.3s ease-in-out; // Suaviza la transición de color
+          transition: color 0.3s ease-in-out; 
 
           &:hover {
-            color: $text-nostyle; // Cambia de color al pasar el cursor
+            color: $text-nostyle; 
           }
         }
       }
@@ -85,5 +87,58 @@
 
   .custom-text-muted {
     color: $card-footer-color;
+  }
+}
+
+.project-container {
+  display: flex;
+  width: 80%;
+  margin-top: 3rem;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  .project-card {
+    width: 30%;
+    background-color:$card-bg; 
+    border-radius: 0.5rem; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    &__img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    &__body {
+      padding: 1rem;
+
+      &__title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #333; 
+        margin-bottom: 0.5rem;
+      }
+
+      &__text {
+        font-size: 1rem;
+        color: #666; 
+        margin-bottom: 1rem;
+      }
+
+      &__btn {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        text-align: center;
+        color: #fff;
+        background-color: #007bff; 
+        border-radius: 0.25rem;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+
+      
+      }
+    }
   }
 }
