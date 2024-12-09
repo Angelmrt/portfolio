@@ -11,6 +11,11 @@ body{
     color:$text-nostyle;
 }
 
+#about_me{
+    display: flex;
+    justify-content: center;
+}
+
 #projects{
     min-height: 50vh;
     background:$background-color;

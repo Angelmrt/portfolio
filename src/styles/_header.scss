@@ -7,8 +7,19 @@
   animation: flicker 3s ease-in-out 2;
   color: $text-nostyle;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  h1 {
 
+    font-size: 5rem;
+    font-family:  "Helvetica Neue", sans-serif;
+    @include respond(medium) {
+      font-size: 3.5rem;
+    }
+  
+    @include respond(small) {
+      font-size: 2rem;
+    }
+  }
   @include respond(medium) {
     font-size: 2rem;
   }
@@ -18,18 +29,7 @@
   }
 }
 
-h1 {
 
-  font-size: 10rem;
-  font-family: 'Press Start 2P',cursive;
-  @include respond(medium) {
-    font-size: 4.2rem;
-  }
-
-  @include respond(small) {
-    font-size: 2rem;
-  }
-}
 
 /* Flickering animation */
 @keyframes flicker {
