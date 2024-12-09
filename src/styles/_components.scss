@@ -33,12 +33,14 @@
 
 
 .custom-card {
-  max-width: 540px;
+  max-width: 80%;
   margin-bottom: $card-margin-bottom;
   background-color: $card-bg;
   border-radius: $card-border-radius;
   box-shadow: $card-shadow;
-  
+  a{
+    text-decoration: none;
+  }
   .custom-card-inner {
     display: flex;
     flex-direction: row;
