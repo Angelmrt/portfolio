@@ -106,7 +106,7 @@
 .project-container {
   display: flex;
   width: 80%;
-  margin-top: 3rem;
+ 
   justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
@@ -124,10 +124,13 @@
     }
 
     &__body {
+      margin: 2rem 0;
       padding: 1rem;
 
       &__title {
-        font-size: 1.25rem;
+        padding: 1rem 0;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
         font-weight: bold;
         color: #333; 
         margin-bottom: 0.5rem;
@@ -139,17 +142,7 @@
         margin-bottom: 1rem;
       }
 
-      &__btn {
-        display: inline-block;
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-        text-align: center;
-        color: #fff;
-        background-color: #007bff; 
-        border-radius: 0.25rem;
-        text-decoration: none;
-        transition: background-color 0.3s ease;
-      }
+      
       a{
         text-decoration: none;
         color:$card-footer-color;
