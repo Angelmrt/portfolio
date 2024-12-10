@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;500;700;800;900;1000&display=swap");
 
 $background-color:#000;
+$black-text:$background-color;
 $text-nostyle:#ffffff;
 $nav-fondo: rgba(44, 44, 44, 0.781);
 //$neon-green:#0fa;
@@ -26,3 +27,5 @@ $card-footer-color:rgb(0, 115, 255);
 
 $tech-color:#ffe70e;
 $icon-size:x-large;
+
+$contact-bg:$nav-fondo;
