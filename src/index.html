@@ -6,6 +6,8 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.js"></script>
 
   <title>Mi portfolio</title>
 </head>
@@ -30,7 +32,7 @@
     </div>
   </header>
   <main>
-    <section id="about_me">
+    <section id="about_me" data-aos="fade-left" data-aos-delay="500">
       <div class="custom-card">
         <div class="custom-card-inner">
           <div class="custom-card-image">
@@ -45,19 +47,20 @@
             <p class="tech">Tecnologías Back-End:
               <br> <br>
               <i class="fa-brands fa-java"></i> <span>Java,Spring,SpringBoot</span>
-             <br>
+              <br>
             </p>
             <p class="tech">Tecnologías Front-end:
               <br> <br>
-              <i class="fa-brands fa-npm"></i> <span>npm</span> 
-              <i class="fa-brands fa-node"></i> <span>Node</span>  
+              <i class="fa-brands fa-npm"></i> <span>npm</span>
+              <i class="fa-brands fa-node"></i> <span>Node</span>
               <br> <br>
-              <i class="fa-brands fa-js"></i> <span>JavaScript  </span><i class="fa-brands fa-react"></i>
-              <span>React</span> 
+              <i class="fa-brands fa-js"></i> <span>JavaScript </span><i class="fa-brands fa-react"></i>
+              <span>React</span>
               <br> <br>
-              <i class="fa-brands fa-css3-alt"></i> <span>Css  </span> <i class="fa-brands fa-html5"></i> <span>Html</span>
+              <i class="fa-brands fa-css3-alt"></i> <span>Css </span> <i class="fa-brands fa-html5"></i>
+              <span>Html</span>
               <i class="fa-brands fa-sass"></i> <span>Sass</span>
-              
+
             </p>
             <p class="tech">Tecnologías BDD:
               <br> <br>
@@ -74,19 +77,19 @@
     <div class="container">
       <h2 class=" neonText">Recent Projects</h2>
       <div class="project-container">
-        <div class="project-card">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
           <img src="assets/projectCripto.png" class="project-card__img" alt="proyectoCrptos">
           <div class="project-card__body">
             <h5 class="project-card__title">CriptoBros</h5>
             <p class="project-card__text">
-            Proyecto frontend dedicado a consumir la api de cryptocompare sacando estadisticas
-            ademas de usar apexcharts para crear grafico tipo candlestick  
+              Proyecto frontend dedicado a consumir la api de cryptocompare sacando estadisticas
+              ademas de usar apexcharts para crear grafico tipo candlestick
             </p>
             <a href="https://angelmrt.github.io/Cryptobros/" class="project-card__btn">Echa un vistazo</a>
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-aos="fade-down" data-aos-delay="100">
           <img src="..." class="project-card__img" alt="...">
           <div class="project-card__body">
             <h5 class="project-card__title">Card title</h5>
@@ -96,7 +99,7 @@
           </div>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
           <img src="..." class="project-card__img" alt="...">
           <div class="project-card__body">
             <h5 class="project-card__title">Card title</h5>
@@ -115,24 +118,24 @@
   <footer>
     <footer class="footer">
       <div class="footer-content">
-          <h2>Contact Me</h2>
-          <form class="footer-form">
-              <div class="footer-form-group">
-                  <label for="email">Email:</label>
-                  <input type="email" id="email" name="email" placeholder="Enter your email" required>
-              </div>
-              <div class="footer-form-group">
-                  <label for="subject">Subject:</label>
-                  <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
-              </div>
-              <div class="footer-form-group">
-                  <label for="message">Message:</label>
-                  <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
-              </div>
-              <button type="submit" class="footer-btn-submit">Send Message</button>
-          </form>
+        <h2>Contact Me</h2>
+        <form class="footer-form">
+          <div class="footer-form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="footer-form-group">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
+          </div>
+          <div class="footer-form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="footer-btn-submit">Send Message</button>
+        </form>
       </div>
-  </footer>
+    </footer>
   </footer>
 </body>
 <script type="module" src="main.js"></script>
