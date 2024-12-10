@@ -149,8 +149,10 @@
         border-radius: 0.25rem;
         text-decoration: none;
         transition: background-color 0.3s ease;
-
-      
+      }
+      a{
+        text-decoration: none;
+        color:$card-footer-color;
       }
     }
   }
