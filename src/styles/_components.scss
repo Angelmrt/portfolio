@@ -23,7 +23,9 @@
           font-size: 1rem;
           font-weight: 600;
           transition: color 0.3s ease-in-out; 
-
+          i{
+            font-size: $icon-size;
+          }
           &:hover {
             color: $text-nostyle; 
           }
@@ -87,6 +89,16 @@
 
   .custom-text-muted {
     color: $card-footer-color;
+  }
+  .tech{
+   color:$tech-color;
+   i{
+    color: $text-nostyle;
+    font-size: $icon-size;
+   }
+   span{
+    color: $text-nostyle;
+   }
   }
 }
 
