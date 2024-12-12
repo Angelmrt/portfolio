@@ -35,40 +35,78 @@
   }
 }
 
-
 .custom-card {
-  max-width: 80%;
+  width: 80%;
   margin-bottom: $card-margin-bottom;
   background-color: $card-bg;
   border-radius: $card-border-radius;
   box-shadow: $card-shadow;
-  a{
+  @include respond(medium) {
+    width: 80%;
+
+  }
+
+  @include respond(small) {
+    width: 100%;
+    border-radius: 0;
+  }
+  a {
     text-decoration: none;
   }
+
   .custom-card-inner {
     display: flex;
     flex-direction: row;
+
+    @include respond(medium) {
+      flex-direction: column;
+    }
+
+    @include respond(small) {
+      flex-direction: column;
+    }
   }
 
   .custom-card-image {
-    width: $card-image-width;
+    width: $card-image-width; 
     overflow: hidden;
-    background-image: url(../assets/fondo_about_me.jpg);
+    background-image: url(../assets/fondo_about_me.jpg); 
     background-size: cover;
+    background-position: center; 
     background-repeat: no-repeat;
     border-top-left-radius: $card-border-radius;
     border-bottom-left-radius: $card-border-radius;
+
+    @include respond(medium) {
+      width: 100%;
+      height: 200px; 
+      border-radius: $card-border-radius $card-border-radius 0 0;
+    }
+
+    @include respond(small) {
+      width: 100%;
+      height: 150px; 
+      border-radius: $card-border-radius $card-border-radius 0 0;
+    }
   }
 
   .custom-card-img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 100%; 
+    object-fit: cover; 
   }
 
   .custom-card-body {
     padding: $card-body-padding;
     flex: 1;
+
+    @include respond(medium) {
+      padding-top: $card-body-padding;
+    }
+
+    @include respond(small) {
+      padding-top: $card-body-padding;
+    }
   }
 
   .custom-card-title {
@@ -90,18 +128,23 @@
   .custom-text-muted {
     color: $card-footer-color;
   }
-  .tech{
+
+  .tech {
     margin: 1rem 0;
-   color:$tech-color;
-   i{
-    color: $text-nostyle;
-    font-size: $icon-size;
-   }
-   span{
-    color: $text-nostyle;
-   }
+    color: $tech-color;
+
+    i {
+      color: $text-nostyle;
+      font-size: $icon-size;
+    }
+
+    span {
+      color: $text-nostyle;
+    }
   }
 }
+
+
 
 .project-container {
   display: flex;
